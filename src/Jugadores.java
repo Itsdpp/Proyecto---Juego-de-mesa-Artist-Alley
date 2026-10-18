@@ -60,13 +60,15 @@ private BufferedReader lector = new BufferedReader(new InputStreamReader(System.
                 else//FINALMENTE LLEGUE AQUI, WOOOOOO
                 {
                     int seleccion= Integer.parseInt(cartas[carta-1]);//coloco el valor en una variable aparte
-                    cartas[carta-1]= Textos.tachar(cartas[carta-1]);//
+                    cartas[carta-1]= Textos.tachar(cartas[carta-1]);//se tacha el texto dentro del indice, indicando que fue usada.
                  return seleccion;
                 }
             }
 
         }while (!ver);//un while simple, si entra a una excepcion se vuelve false, se repite
         // y se vuelve true.
+
+        return 35505;//en caso de que de alguna manera llegue aca, el valor regresado sera 35505, "ERROR" en numeros
     }//fin clase jugar_carta
 
     //se encarga de revisar si la carta fue jugada o no
