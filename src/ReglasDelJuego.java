@@ -4,14 +4,15 @@ public class ReglasDelJuego {
     private int Comprador = 0;//
 
     public void GenerarComprador(){
-        while(rondas < 6){
+        if (rondas < 6) {
             //para explicacion de este segmento en un txt aparte(ojala haber pensado en algo como eso, pero no conocia
             // la funcion math.floor)
-            Comprador=(int) (Math.floor(Math.random() * ((32) - (10) + 1)) + (10));//obligatorio usar int, aunque floor
+            Comprador = (int) (Math.floor(Math.random() * ((35) - (10) + 1)) + (10));//obligatorio usar int, aunque floor
             // evite decimales
-            rondas= rondas + 1;//lo ultimo que se debe hacer en cada turno
+            rondas = rondas + 1;//lo ultimo que se debe hacer en cada turno
+        } else {
+            //metodo fin del juego ingresado aqui
         }
-        //metodo fin del juego ingresado aqui
     }
     private void FinDelJuego(){
 
